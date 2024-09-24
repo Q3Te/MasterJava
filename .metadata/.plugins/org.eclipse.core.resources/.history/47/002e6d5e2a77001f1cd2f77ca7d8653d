@@ -1,0 +1,13 @@
+package com.masterjava.ex4;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Libro l1 = new Libro(1234);
+		
+		l1.titulo="Java";
+		l1.autor="Juan";
+
+	}
+
+}

@@ -1,0 +1,62 @@
+package com.masterjava.ex5;
+
+public class Cuenta {
+	private String titular;
+	private int pin;
+	private double cantidad;
+	
+	public Cuenta(String titular) {
+		super();
+		this.titular = titular;
+	}
+	public Cuenta(float cantidad) {
+		super();
+		this.cantidad = cantidad;
+	}
+	public Cuenta(int pin) {
+		super();
+		this.cantidad = cantidad;
+	}
+	
+	public String getTitular() {
+		return titular;
+	}
+	public void setTitular(String titular) {
+		this.titular = titular;
+	}
+	public double getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(double cantidad) {
+		this.cantidad = cantidad;
+	}
+	
+
+	//Method to check USER & PIN
+	
+	public double  ingresar(double cantidad) {
+		double ingreso=0;
+
+		if(ingreso>0){
+			cantidad+=ingreso;
+		}
+		
+		return cantidad;
+		
+	}
+	
+	public double retirar(double cantidad) {
+		double retiro=0;
+		
+		if(cantidad-retiro<0) {
+			cantidad=0;
+		}
+		else if (cantidad-retiro>0) {
+			cantidad-=retiro;
+		}
+		
+		return cantidad;
+		
+		
+	}
+}

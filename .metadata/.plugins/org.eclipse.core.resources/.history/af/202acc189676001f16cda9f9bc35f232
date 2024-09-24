@@ -1,0 +1,32 @@
+package com.sinensia.demo;
+
+public class Partido {
+	private Equipo e_local; //String¿
+	private Equipo e_visitante;  //String¿
+	private int g_local;  
+	private int g_visitante;  
+	
+	public Partido(Equipo e_local, Equipo e_visitante) {
+		this.e_local=e_local;
+		this.e_visitante=e_visitante;
+		
+	}
+	
+	public void proceso_Resultado(int g_local, int g_visitante) {
+		this.g_local=g_local;
+		this.g_visitante=g_visitante;
+		
+		if(g_local>g_visitante) {
+			e_local.p_Ganados(g_local);	
+		}
+		else if (g_visitante>g_local) {
+			e_visitante.p_Ganados(g_visitante); 
+		}
+	}
+		
+	public String resultadoFinal() {
+		return e_local.getNombre()+" "+g_local+"-"+g_visitante+" "+e_visitante.getNombre();
+	}
+		
+  }
+

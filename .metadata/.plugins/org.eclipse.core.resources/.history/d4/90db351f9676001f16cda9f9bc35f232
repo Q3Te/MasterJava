@@ -1,0 +1,43 @@
+spackage com.sinensia.demo;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class Liga {
+	private List <Equipo> equipos;
+	private List <Partido> partidos;
+	private List <Jugador> jugadores;
+	
+	public Liga() {
+		equipos = new ArrayList <>();
+		partidos = new ArrayList <>();
+		jugadores = new ArrayList <>();
+	}
+	
+	public void annadeEquipo(Equipo equipo) {
+		equipos.add(equipo);
+	}
+	
+	public void annadePartido(Partido partido) {
+		partidos.add(partido);
+	}
+	
+	public void annadegoles(Jugador jugador) {
+		jugadores.add(jugador);
+	}
+	
+	public List<Partido>obtenerPartidos(){
+		return partidos;
+	}
+	public List<Equipo>obtenerEquipoOrdenadoPorPartidosGanados(){
+		equipos.sort(Comparator.comparingInt(Equipo::getP_Ganados).reversed());
+		return equipos;
+	}
+	
+	public List<Jugador> jugadoresPorGoles(){
+		jugadores.sort(Comparator.comparingInt(Jugador::getG_Marcados).reversed());
+		return jugadores;
+	}
+
+}

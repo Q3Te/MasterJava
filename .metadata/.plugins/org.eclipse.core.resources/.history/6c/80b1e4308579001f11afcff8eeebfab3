@@ -1,0 +1,141 @@
+package com.masterjava.ex1;
+
+import java.util.Scanner;
+
+
+public class Main {
+	 private static Liga liga = new Liga(); 
+
+private static void crearEquipo(Scanner teclado) {	
+	int numJugadores, i;
+	String nombreEquipo, nombreJugador;
+    char resp;
+    
+    System.out.println("Nombre equipo: ");
+    nombreEquipo=teclado.nextLine();
+    Equipo equipo = new Equipo(nombreEquipo);
+//    
+//    System.out.println("Número de jugadores (minimo 5)");
+//    numJugadores=teclado.nextInt();
+//    teclado.nextLine();
+
+    do{
+	    System.out.println("Número de jugadores (minimo 5)");
+	    numJugadores=teclado.nextInt();
+	    teclado.nextLine();
+    	for(i=0; i>numJugadores; i++)
+    	{
+        	System.out.println("Nombre jugador: ");
+            nombreJugador=teclado.nextLine();
+            equipo.annadeJugador(new Jugador(nombreJugador));
+    	}
+//        System.out.println("Desea añadir otro jugador (s/n): ");
+//        resp=teclado.next().charAt(0);
+//        teclado.nextLine();
+//        		
+//        while(resp=='s')
+//        {
+//        	System.out.println("Nombre jugador: ");
+//            nombreJugador=teclado.nextLine();
+//            equipo.annadeJugador(new Jugador(nombreJugador));
+//            System.out.println("Desea añadir otro jugador (s/n): ");
+//            resp = teclado.next().charAt(0);
+//            teclado.nextLine();
+//        }
+    	
+    }while(numJugadores>=2);
+  
+    
+    liga.annadeEquipo(equipo);
+    System.out.println(equipo);
+    System.out.println(equipo+" Añadido a Liga");
+}
+
+private static void jugarPartido(Scanner teclado) {
+	String equipLocal, equipVisi;
+	int gLocal, gVisi;
+    System.out.println("Nombre equipo local:");
+    equipLocal = teclado.nextLine();
+    Equipo local = liga.buscarEquipoPorNombre(equipLocal);
+
+    System.out.println("Nombre equipo visitante:");
+    equipVisi = teclado.nextLine();
+    Equipo visitante = liga.buscarEquipoPorNombre(equipVisi);
+
+    if (local!=null && visitante!=null)
+    {
+        System.out.println("Goles equipo local:");
+        gLocal = teclado.nextInt();
+        teclado.nextLine();
+        System.out.println("Goles equipo visitante:");
+        gVisi = teclado.nextInt();
+        teclado.nextLine();
+
+        liga.añadirPartido(local, visitante, gLocal, gVisi);
+        System.out.println("Partido jugado.");
+    }
+    else
+    {
+        System.out.println("Uno o ambos equipos no encontrados.");
+    }
+}
+
+private static void jugadoresOrdenadosPorGoles(Scanner teclado) {
+    liga.listarJugadoresDeEquiposOrdenadosPorGoles();
+}
+
+private static void partidosConResultados() {
+    liga.listarPartidosConResultados();
+}
+
+private static void equiposOrdenadosPorPartidosGanados() {
+    liga.listarEquiposPorPartidosGanados();
+}
+
+
+public static void main(String[] args) {
+			Scanner teclado = new Scanner(System.in);
+			Liga liga = new Liga();
+			
+			int op;
+				
+			  do {
+			          System.out.println("Elige una opción: \n\n"
+			                  + "1- Crear equipo con jugadores\n"
+			                  + "2- Jugar partido\n"
+			                  + "3- Listar jugadores de cada equipo ordenados por goles marcados\n"
+			                  + "4- Lista de partidos jugados con sus resultados\n"
+			          		  + "5- Listar equipos de liga ordenados por partidos ganados\n"
+			          		  + "6- Salir\n");
+			          op=teclado.nextInt();
+			          teclado.nextLine();
+			
+			          switch (op) {
+			              case 1:
+			            	  crearEquipo(teclado);
+			              	break;
+			              	
+			              case 2:
+			            	  jugarPartido(teclado);
+			              	break;
+			              	
+			              case 3:
+			            	  jugadoresOrdenadosPorGoles(teclado);
+			              	break;
+			              case 4:
+			          			partidosConResultados();
+			          	break;
+			              case 5:
+			          			equiposOrdenadosPorPartidosGanados();
+			          	break;
+			              case 6:
+			                  	System.out.println("Saliendo del sistema.");
+			                  break;
+			              default:
+			                  	System.out.println("Opción no válida.");
+			          }
+			  } while (op<=5);
+
+}
+
+}

@@ -1,0 +1,17 @@
+package com.masterjava.ex3;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 Ordenador ordenador = new Ordenador(1, "Dell XPS 15", 1500.00, 10, "Intel i7", 16, 512);
+	        TelefonoMovil telefono = new TelefonoMovil(2, "iPhone 13", 999.99, 20, "Movistar");
+
+	        System.out.println("Información del ordenador:");
+	        ordenador.mostrarInfo();
+
+	        System.out.println("\nInformación del teléfono móvil:");
+	        telefono.mostrarInfo();
+
+	}
+
+}

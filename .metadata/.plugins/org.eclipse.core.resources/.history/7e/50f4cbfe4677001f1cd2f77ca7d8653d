@@ -1,0 +1,9 @@
+package com.masterjava.ex5;
+
+public class Cuenta {
+	private String titular;
+	private float cantidad;
+	
+
+
+}

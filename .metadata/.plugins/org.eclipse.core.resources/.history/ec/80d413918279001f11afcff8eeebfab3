@@ -1,0 +1,22 @@
+package com.masterjava.ex3;
+
+public class Producto {
+ 	protected final int codigo;
+    protected String modelo;
+    protected double precio;
+    protected int stock;
+
+    public Producto(int codigo, String modelo, double precio, int stock) {
+        this.codigo = codigo;
+        this.modelo = modelo;
+        this.precio = precio;
+        this.stock = stock;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Código: "+codigo);
+        System.out.println("Modelo: "+modelo);
+        System.out.println("Precio: "+precio);
+        System.out.println("Cantidad disponible: "+stock);
+    }
+}
