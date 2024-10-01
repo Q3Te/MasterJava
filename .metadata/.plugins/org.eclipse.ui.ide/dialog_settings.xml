@@ -15,6 +15,17 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX11_PruebaPrimera"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX1_LigaFutbol_AlternativeMethod"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\Herencia"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX10_FigurasGeometricas"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX10 REF"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX9_Animales"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX1_LigaFutbol_SimpleMethod"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\ArgumentosVariable"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX7_Orquesta"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX8 - Interfaces"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX7 - Orquesta"/>
 			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX6_Cafetera"/>
 			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX4_Libro"/>
 			<item value="C:\Users\6003218\Downloads\Fix\demo"/>
@@ -31,7 +42,7 @@
 			<item value="C:\Users\6003218\Desktop\EclipseEXs\demo"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="307"/>
+			<item key="DIALOG_X_ORIGIN" value="80"/>
 			<item key="DIALOG_Y_ORIGIN" value="191"/>
 			<item key="DIALOG_WIDTH" value="885"/>
 			<item key="DIALOG_HEIGHT" value="629"/>
