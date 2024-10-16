@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PPT EXs</title>
+</head>
+<script>
+document.write("<br>_______________________________________________________________________________________________<br>");
+sumatorio(prompt("Dime un numero: "));
+function sumatorio(n1){
+    let resultado = 0;
+    if (n1>1)
+    {
+        for(i=1;i<=n1;i++)
+        {
+            resultado += i  //iNUM=1+2+3 
+        }
+    }
+    document.write(resultado)
+
+document.write("Siguiente Pregunta <br>_______________________________________________________________________________________________<br>");s
+    
+    let base= prompt("Número base: ")
+	let exponente= prompt("Exponente: ")
+		
+	for(i=1; numero<=exponente; i++)
+	{
+		resultado*=base  //Else resultado =base**exponente
+	}
+	documento.write(base+"<sup>"+exponente+"</sup> es igual a "+resultado); 
+		
+	document.write("<br>_______________________________________________________________________________________________<br>");
+	
+/*	REF SOLUTION 			
+	
+	elevar();
+	function elevar(){
+		let resultado = 1 ;
+		let base = prompt("Base para elevarla: ");
+		let exponente = prompt("Exponente para la base: ");
+		resultado = base ** exponente
+		document.write("Resultado = "+resultado);
+
+	}
+*/
+</script>
+	<body>
+	<!-- 
+	1- Función potencia (Base, exponenete) que calcule el valor de base^exponente
+	2- Función de nombre sumatorio que recibe un entero positivo>1 y devuelve la suma desde 1 al parámetro recibido
+	 -->
+
+	</body>
+</html>

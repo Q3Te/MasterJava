@@ -1,0 +1,105 @@
+package com.masterjava.modelos;
+
+import java.time.Duration;
+import java.time.LocalTime;
+
+import com.masterjava.interfaces.Conducible;
+
+/**
+*Clase Coche
+*@author Manuel Portal
+*@version 4.33.0, 30 sept 2024
+*/
+public class Coche extends Vehiculo implements Conducible{
+	protected static final int ruedas=4;
+    private LocalTime horaArrancar;
+    private LocalTime horaInicio;
+    private LocalTime horaFin;
+    private Duration duracion;
+    private int totalHoras;
+    private int	totalMins;
+
+	public Coche(String matricula, String color) {
+		super(matricula, color);
+		horaArrancar=LocalTime.now();
+		totalHoras=0;;
+		totalMins=0;
+	}
+
+	@Override
+	public String getColor() {
+		return super.getColor();
+	}
+
+	@Override
+	public int getVelocidad() {
+		return super.getVelocidad();
+	}
+
+	@Override
+	public String getMatricula() {
+		return super.getMatricula();
+	}
+
+	@Override
+	public void arrancar() {
+		System.out.println("Coche arrancado a las "+horaArrancar.getHour()+":"+horaArrancar.getMinute());
+	}
+	
+	@Override
+	public void conducir() {
+		System.out.println("Conduciendo el coche...");		
+	}
+
+	@Override
+	public void avanzar(int km, double velocidad) {
+		double tiempoEnHoras = km/velocidad;
+		long totalEnFormato= (long)(tiempoEnHoras*60);		//Convierte el teimpo en un objeto Duración
+		Duration duracion =Duration.ofMinutes((totalEnFormato));
+		long horas=duracion.toHours();
+		long mins=totalEnFormato%60; //Why %60 bc when you do it without modulo (long mins=duracion.toMinutes();)s, you get the whole mins
+		
+		totalHoras += horas;
+		totalMins += mins;
+		System.out.println("Avanzando "+km+" km a "+velocidad+" km/h. Tiempo "+horas+"hrs, "+mins+"mins");
+	}
+	
+	@Override
+	public void parar() {
+		System.out.println("El viaje ha finalizado; El coche se ha detenido"); 
+		LocalTime tiempoFinalizado=horaArrancar.plusHours(totalHoras).plusMinutes(totalMins);
+		System.out.println("El viaje ha finalizado; El coche se ha detenido"); 
+		System.out.println("Resumen viaje"); 
+		System.out.println();
+		System.out.println()
+		System.out.println();;
+		
+//		Coche arrancado a las 10:34
+//		Conduciendo el coche...
+//		Avanzando 350 km a 120.0 km/h. Tiempo 2hrs, 55mins
+//		Avanzando 30 km a 120.0 km/h. Tiempo 0hrs, 15mins
+		
+//		it adds all the miCoche.avanzar() in this case 2hrs 55mins + 0hrs 15mins (Following the format to get XXhrs XXmins) and that total is added to time from arrancar in this case 10.34
+//		
+		
+		
+		// Hora actual "+horaParar.getHour()+":"+horaParar.getMinute());
+//        horaFin = LocalTime.now();
+//        Duration.between(horaInicio, horaFin);  //Duration duracion = Duration.between(horaInicio, horaFin);
+//        System.out.println("El coche se ha detenido. Hora actualDuración del viaje: " + duracion.getSeconds() + " segundos.");
+//        setVelocidad(0);  // set speed to 0 when stopped	
+//        
+//		LocalTime horaArrancar=LocalTime.now();
+//		System.out.println("Coche arrancado a las: "+horaArrancar.getHour()+":"+horaArrancar.getMinute());
+	}
+
+	@Override
+	public void retroceder() {
+		 System.out.println("Retrocediendo...");
+	}
+
+	@Override
+	public String toString() {
+		return "Coche con Matrícula ["+getMatricula()+"] de Color ["+getColor()+"]";
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Pedido/src/main/webapp/Datos.html&apos; to &apos;Formulario_Datos.html&apos;" description="Rename resource &apos;Datos.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/Datos.html" name="Formulario_Datos.html" stamp="1728857052563" updateReferences="true"/>
+</session>

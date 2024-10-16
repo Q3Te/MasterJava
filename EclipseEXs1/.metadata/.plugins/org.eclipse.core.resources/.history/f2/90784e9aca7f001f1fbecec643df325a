@@ -1,0 +1,53 @@
+package com.masterjava.modelos;
+
+import java.time.LocalTime;
+
+import com.masterjava.interfaces.Conducible;
+
+/**
+*Clase Moto
+*@author Manuel Portal
+*@version 4.33.0, 30 sept 2024
+*/
+public class Moto extends Vehiculo implements Conducible{
+	protected static final int ruedas=2;
+
+	public Moto(String matricula, String color) {
+		super(matricula, color);
+	}
+
+	@Override
+	public void conducir() {
+		System.out.println("Conduciendo la moto...");		
+	}
+
+	@Override
+	public void avanzar(int km, double velocidad) {
+		double tiempoEnHoras = km / velocidad;
+        System.out.println("Avanzando " + km + " metros a " + velocidad + " km/h. Tiempo: " + tiempoEnHoras + " horas.");
+        this.setVelocidad((int) velocidad);  // setting the speed
+	}
+	
+	@Override
+	public void retroceder() {
+		System.out.println("Retrocediendo...");		
+	}
+
+	@Override
+	public void parar() {
+        System.out.println("La moto se ha detenido.");
+        setVelocidad(0); 		
+	}
+
+	@Override
+	public void arrancar() {
+		LocalTime horaArrancar=LocalTime.now();
+		System.out.println("Moto arrancada a las: "+horaArrancar.getHour()+":"+horaArrancar.getMinute());	
+	}
+
+	@Override
+	public String toString() {
+		return "Moto con Matrícula ["+getMatricula()+"] de Color ["+getColor()+"]";
+	}
+	
+}
