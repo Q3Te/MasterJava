@@ -9,6 +9,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Eliminacion De Producto</title>
+<style>
+	table, th, td {
+	    border: 1px solid black;
+	    border-collapse: collapse;
+	    text-align: center;
+	    padding: 5px;
+	}
+</style>
 </head>
 <body>
 <% String nombre = (String) request.getAttribute("nombre"); %>
@@ -53,6 +61,7 @@
         }
         
         out.println("</table>");
+        out.println("<br>");   out.println("<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>"); 
 	}
 %>
 

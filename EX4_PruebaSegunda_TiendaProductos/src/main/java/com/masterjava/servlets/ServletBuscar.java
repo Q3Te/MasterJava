@@ -32,8 +32,6 @@ public class ServletBuscar extends HttpServlet {
 	    }
 	    else
 	    {
-	    	
-	        request.setAttribute("mensaje", "Producto no se ha podido eliminar");
 	        RequestDispatcher despatcher = request.getRequestDispatcher("/malBusqueda.jsp");
 	        despatcher.forward(request, response);
 	    }

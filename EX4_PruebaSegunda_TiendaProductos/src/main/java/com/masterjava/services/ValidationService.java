@@ -11,7 +11,7 @@ public class ValidationService {
 		 Producto p1=new Producto("Chocolate",3.41,12,Categoria.DULCES);
 		 Producto p2=new Producto("Camiseta de Zara",39.99,20,Categoria.ROPA);
 		 Producto p3=new Producto("Café con Leche",0.90,45,Categoria.BEBIDAS);
-		 Producto p4=new Producto("Producto_A_Cambiar",10.00,50,Categoria.MUEBLES);
+		 Producto p4=new Producto("ProductoACambiar",10.00,50,Categoria.MUEBLES);
 	 		
 		 listaProductos.add(p1);
 		 listaProductos.add(p2);

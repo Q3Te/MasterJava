@@ -7,6 +7,7 @@
 <title>Error al Modificar Producto</title>
 </head>
 <body>
-	<h1>ERROR AL MODIFICAR PRODUCTO</h1>
+	<h1>ERROR AL MODIFICAR PRODUCTO</h1>  <br>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>
 </body>
 </html>

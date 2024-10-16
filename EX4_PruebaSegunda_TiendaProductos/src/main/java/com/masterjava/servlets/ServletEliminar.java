@@ -26,7 +26,7 @@ public class ServletEliminar extends HttpServlet {
 	    {
 	    	proceso.eliminarProducto(producto);
 	    	request.setAttribute("nombre", nombre);
-			RequestDispatcher despatcher = request.getRequestDispatcher("/eliminarOutput.jsp");
+			RequestDispatcher despatcher = request.getRequestDispatcher("/resultadoEliminarProducto.jsp");
 			despatcher.forward(request, response);	
 	    }
 	    else

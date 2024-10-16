@@ -62,6 +62,7 @@
         }
         
         out.println("</table>");
+        out.println("<br>");   out.println("<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>"); 
 	}
 	
 %>

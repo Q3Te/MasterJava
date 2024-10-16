@@ -5,43 +5,60 @@
 <meta charset="UTF-8">
 <title>Alta de Producto</title>
 <script>
-	const form = document.querySelector('form');
+function validacionCampos(){
+	const formulario = document.querySelector('form');
 	const nombreInput = document.querySelector('#nombre');
 	const categoriaSelect = document.querySelector('#categoria');
 	const precioInput = document.querySelector('#precio');
 	const stockInput = document.querySelector('#stock');
 	
-	form.addEventListener('submit', (e) => {
-	    if(nombreInput.value.trim() === '')
-	    {
-	        alert('Nombre no puede estar vacío');
-	        e.preventDefault();
-	    }
+	let isValid = true;
 	
-	    if(categoriaSelect.value === '')
-	    {
-	        alert('Debe seleccionar una categoría');
-	        e.preventDefault();
-	    }
+	if((nombreInput.value.trim() === '') || (!esTexto(nombreInput.value)))
+	{
+	  alert('Nombre no puede estar vacío o contener número(s)');
+	  isValid = false;
+	}
 	
-	    if(isNaN(precioInput.value) || precioInput.value<=0)
-	    {
-	        alert('Precio debe ser un número mayor que 0');
-	        e.preventDefault();
-	    }
+	if(categoriaSelect.value === '')
+	{
+	  alert('Debe seleccionar una categoría');
+	  isValid = false;
+	}
 	
-	    if(isNaN(stockInput.value) || stockInput.value<=0)
-	    {
-	        alert('Stock debe ser un número mayor que 0');
-	        e.preventDefault();
-	    }
-	});
+	if(isNaN(precioInput.value) || precioInput.value <= 0)
+	{
+	  alert('Precio debe ser un número mayor que 0');
+	  isValid = false;
+	}
+	
+	if(isNaN(stockInput.value) || stockInput.value <= 0)
+	{
+	  alert('Stock debe ser un número mayor que 0');
+	  isValid = false;
+	}
+	
+	return isValid;
+}
+
+function esTexto(inputValue) {
+	return /^[a-zA-Z]+$/.test(inputValue.trim());
+}
+
+function enviarFormulario(){
+  	if(validacionCampos())
+  	{
+  		alert('TODO BIEN');
+   		document.getElementById('datosFormulario').submit();
+	    document.getElementById('datosFormulario').reset(); 
+  	}
+}
 
 </script>
 </head>
 <body>
     <h1>ALTA DE PRODUCTOS</h1>
-    <form action="ServletAltaProducto" method="post">
+    <form id="datosFormulario" action="ServletAltaProducto" method="post">
         <label for="nombre">Nombre producto: </label><br>
         <input type="text" id="nombre" name="nombre"><br>
         <label for="categoria">Categoria producto: </label><br>
@@ -55,7 +72,8 @@
         <input type="number" id="precio" name="precio" ><br>
         <label for="stock">Stock: </label><br>
         <input type="number" id="stock" name="stock"><br>
-        <input type="submit" value="Dar de alta">
-    </form>
+        <button type="button" id="btnEnviar" onclick="enviarFormulario()">Dar de alta</button>
+    </form><br>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>    
 </body>
 </html>

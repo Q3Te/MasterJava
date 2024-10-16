@@ -35,7 +35,6 @@ public class ServletModificar extends HttpServlet {
 	    }
 	    else
 	    {
-	        request.setAttribute("mensaje", "Producto no encontrado");
 	        RequestDispatcher despatcher = request.getRequestDispatcher("/malModificarProducto.jsp");
 	        despatcher.forward(request, response);
 	    }

@@ -7,6 +7,7 @@
 <title>Error al Buscar Producto</title>
 </head>
 <body>
-	<h1>ERROR AL BUSCAR PRODUCTO</h1>
+	<h1>ERROR AL BUSCAR PRODUCTO</h1><br>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>
 </body>
 </html>

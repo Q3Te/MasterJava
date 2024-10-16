@@ -26,9 +26,6 @@ public class ServletModificarDatos extends HttpServlet {
 	    Producto producto = (Producto) session.getAttribute("producto");
 	    String nombreBuscar = producto.getNombre(); 
 	    
-	    System.out.println("NombreBuscar: " + nombreBuscar);
-	    System.out.println("Producto: " + producto);
-	    
 		String nombreP = request.getParameter("nombre");   	    
 	    String categoria = request.getParameter("categoria");			  
 	    double precio = Double.parseDouble(request.getParameter("precio"));		    

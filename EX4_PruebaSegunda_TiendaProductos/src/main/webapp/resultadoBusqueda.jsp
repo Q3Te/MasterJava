@@ -38,11 +38,8 @@
 	        out.println("<td>" + producto.getCategoria() + "</td>");
 	        out.println("</tr>");
         out.println("</table>"); 
+        out.println("<br>");   out.println("<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>");
 	}
-/* 	else
-	{
-		out.println("<h2>Producto no encontrado </h2>");
-	} */
 %>
 	
 </body>
