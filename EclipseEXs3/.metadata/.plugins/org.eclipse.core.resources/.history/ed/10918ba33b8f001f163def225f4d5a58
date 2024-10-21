@@ -1,0 +1,5 @@
+package com.masterjava.connection;
+
+public class ConnectBDD {
+
+}

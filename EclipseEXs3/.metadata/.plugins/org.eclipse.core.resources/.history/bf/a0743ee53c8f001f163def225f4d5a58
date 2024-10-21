@@ -1,0 +1,10 @@
+package com.masterjava.controller;
+
+/**
+* Clase Controller
+* @author Manuel Portal
+* @version 4.3.3, 21 oct 2024
+*/
+public class Controller {
+
+}

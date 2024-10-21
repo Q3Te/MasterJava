@@ -1,0 +1,10 @@
+package com.masterjava.bdd;
+
+public class Principal_EmpresaBDD {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

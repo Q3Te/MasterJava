@@ -1,0 +1,15 @@
+package com.masterjava.controller;
+
+/**
+* Clase Controller
+* @author Manuel Portal
+* @version 4.3.3, 21 oct 2024
+*/
+public class Controller {
+	//INSERTAREMPLEADOS
+	//MODIFICAR DATOS UN EMPLEADO
+	//LISTAR [CONSOLA] EMPLEADOS CON SUS DATOS
+	//Buscar empleados por apellido1
+	//Eliminar empleado
+	//Salario Medio (Calcular)
+}

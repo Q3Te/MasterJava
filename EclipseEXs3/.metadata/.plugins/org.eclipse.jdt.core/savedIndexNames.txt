@@ -1,0 +1,11 @@
+INDEX VERSION 1.134+C:\Users\6003218\Desktop\3º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jdt.core
+589737870.index
+1865797976.index
+773152533.index
+366231421.index
+1300253013.index
+4037271856.index
+529881099.index
+514687004.index
+2016485019.index
+1772793994.index

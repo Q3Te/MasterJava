@@ -1,0 +1,73 @@
+package com.masterjava.controller;
+	import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.time.LocalDate;
+
+import com.masterjava.connection.ConnectionBDD;
+
+/**
+* Clase Controller
+* @author Manuel Portal
+* @version 4.3.3, 21 oct 2024
+*/
+public class Controller {
+
+public static void annadirEmpleadoBackend(int idEmpleado, String nombre, String apellido1, String apellido2,LocalDate fechaNacimiento, int salario) {
+	Connection conex = null;
+	String query = "INSERT INTO personas (idEmplead,nombre,apellido1,apellido2,fechaNacimiento,salario) VALUES(?,?,?,?,?,?)";
+	ConnectionBDD cbd = new ConnectionBDD();
+	conex =cbd.conexion();
+	if(conex!=null)
+	{
+		System.out.println("Conectado correctamente");			
+		try(PreparedStatement sentencia = conex.prepareStatement(query)){				
+	        sentencia.setString(1, idEmpleado);
+	        sentencia.setString(2, nombre);
+	        sentencia.setString(3, apellido1);
+			sentencia.setString(4, apellido2);
+	        sentencia.setDate(5, java.sql.Date.valueOf(fechaNacimiento)); //Cambia nuestro input con su formato de Date tipo java a formato de Date tipo sql
+	        sentencia.setInt(6, salario); // You need to set a value for salario
+	        sentencia.executeUpdate();
+			System.out.println("Registro insertado");
+		}catch(SQLException e){
+			e.printStackTrace();
+		}						
+	}
+	else
+	{
+		System.out.println("No se ha podido conectar");			
+	}
+	
+//	if(conex!=null)
+//	{
+//		System.out.println("Conectado correctamente");			
+//		try(Statement sentencia = conex.createStatement()){				
+//			sentencia.executeUpdate(query);
+//			System.out.println("Registro insertado");
+//		}catch(SQLException e){
+//			e.printStackTrace();
+//		}						
+//	}
+//	else
+//	{
+//		System.out.println("No se ha podido conectar");			
+//	}
+}
+}
+//
+//if (conex != null) {
+//    System.out.println("Conectado correctamente");
+//    try (PreparedStatement sentencia = conex.prepareStatement(query)) {
+//        sentencia.setString(1, nombre);
+//        sentencia.setString(2, apellido1);
+//        sentencia.setString(3, apellido2);
+//        sentencia.setDate(4, java.sql.Date.valueOf(fechaNacimiento)); //Cambia nuestro input con su formato de Date tipo java a formato de Date tipo sql
+//        sentencia.setInt(5, salario); // You need to set a value for salario
+//        sentencia.executeUpdate();
+//        System.out.println("Registro insertado");
+//    } catch (SQLException e) {
+//        e.pr
+
+

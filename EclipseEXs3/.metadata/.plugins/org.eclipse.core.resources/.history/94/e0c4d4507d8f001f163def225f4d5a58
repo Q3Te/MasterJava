@@ -1,0 +1,54 @@
+package com.masterjava.bdd;
+
+import java.util.Scanner;
+
+
+
+public class Principal_EmpresaBDD {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		
+		int op;
+		  do {
+		          System.out.println("Elige una opción: \n\n"
+		                  + "1- Insertar Empleado\n"
+		                  + "2- Modificar datos de un empleado\n"
+		                  + "3- Listar empleados con su información\n"
+		                  + "4- Buscar empleados por primer apellido\n"
+		          		  + "5- Eliminar un empleado\n"
+		          		  + "6- Mostrar salario medio\n"
+		          		  + "7- Salir\n");
+		          op=teclado.nextInt();
+		          teclado.nextLine();
+		
+		          switch (op) {
+		              case 1:
+		            	  annadirEmpleado(teclado);
+		              	break;
+		              	
+		              case 2:
+		            	  modificarEmpleado(teclado);
+		              	break;
+		              	
+		              case 3:
+		            	  listarEmpleadosConSuInfo();
+		              	break;
+		              case 4:
+		            	  buscarEmpleadoPorPrimerApellido();
+		          	break;
+		              case 5:
+		          			eliminarEmpleado();
+		          	break;
+		              case 6:
+		          			mostrarLiga();
+		          	break;
+		              case 7:
+		                  	System.out.println("Saliendo del sistema.");
+		                  break;
+		              default:
+		                  	System.out.println("Opción no válida.");
+		          }
+		  } while (op<=6);
+ }
+}

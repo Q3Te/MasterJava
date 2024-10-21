@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+C:\Users\6003218\Desktop\3º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\435618238.index
+\EX4_PruebaSegunda_TiendaProductos\src\main\java
