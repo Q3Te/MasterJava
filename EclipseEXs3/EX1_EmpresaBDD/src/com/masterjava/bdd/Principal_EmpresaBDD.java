@@ -30,12 +30,12 @@ public class Principal_EmpresaBDD {
 			System.out.println("Salario: ");
 		    salario = teclado.nextInt();
 		    teclado.nextLine();
+		    Controller.annadirEmpleadoBackend(idEmpleado,nombre,apellido1,apellido2,fechaNacimiento,salario);
 			
 		    System.out.println("Desea añadir otro empleado (s/n): ");
 			resp=teclado.next().charAt(0);
 			teclado.nextLine();
-			 Controller.annadirEmpleadoBackend(idEmpleado,nombre,apellido1,apellido2,fechaNacimiento,salario);
-
+			 
 		  		
 			while(resp=='s')
 			{
@@ -59,8 +59,9 @@ public class Principal_EmpresaBDD {
 				System.out.println("Desea añadir otro empleado (s/n): ");
 				resp = teclado.next().charAt(0);
 				teclado.nextLine();
+				Controller.annadirEmpleadoBackend(idEmpleado,nombre,apellido1,apellido2,fechaNacimiento,salario);
 			}
-			 Controller.annadirEmpleadoBackend(idEmpleado,nombre,apellido1,apellido2,fechaNacimiento,salario);
+
 	    }
 	    else
 	    {
