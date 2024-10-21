@@ -8,3 +8,4 @@ CREATE TABLE empleados (
   fechaNacimiento DATE NULL,
   salario INT NULL
 );
+INSERT INTO empleados (idEmpleado,nombre,apellido1,apellido2,fechaNacimiento,salario) VALUES(1,"Juan","DeRosi","Giovanni","1994-02-11",5515);
