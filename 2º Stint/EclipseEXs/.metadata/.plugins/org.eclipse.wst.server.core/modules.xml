@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:EX1_MixFromPpt" serverId="Tomcat v10.1.28 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:EX1_PrintNumero_X_veces" serverId="Tomcat v10.1.28 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:TeacherExample" serverId="Tomcat v10.1.28 at localhost"/>
+</modules>

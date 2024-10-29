@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.masterjava.connection&apos; to &apos;EX4_PruebaSegunda_TiendaProductos/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;EXAMPLE_3&apos;&#x0D;&#x0A;- Destination element: &apos;EX4_PruebaSegunda_TiendaProductos/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;EXAMPLE_3/src/com.masterjava.connection&apos;" description="Copy package" destination="=EX4_PruebaSegunda_TiendaProductos/src\/main\/java" element1="/src&lt;com.masterjava.connection" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1729840847089" version="1.0"/>
+</session>

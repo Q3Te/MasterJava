@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Realizar Pedido</title>
+<script>
+function validacionCampos(){
+	const formulario = document.querySelector('form');
+	const nombreInput = document.querySelector('#nombre');;
+	const stockInput = document.querySelector('#stock');
+	
+	let isValid = true;
+	
+	if((nombreInput.value.trim() === '') || (!esTexto(nombreInput.value)))
+	{
+	  alert('Nombre no puede estar vacío o contener número(s)');
+	  isValid = false;
+	}
+	
+	if(isNaN(stockInput.value) || stockInput.value <= 0)
+	{
+	  alert('Stock debe ser un número mayor que 0');
+	  isValid = false;
+	}
+	
+	return isValid;
+}
+
+function esTexto(inputValue) {
+	return /^[a-zA-Z]+$/.test(inputValue.trim());
+}
+
+function enviarFormulario(){
+  	if(validacionCampos())
+  	{
+  		alert('TODO BIEN');
+   		document.getElementById('datosRealizarCompraFormulario').submit();
+	    document.getElementById('datosRealizarCompraFormulario').reset(); 
+  	}
+}
+
+</script>
+<style>
+	table {
+	    margin-left: 470px;
+	    margin-top: 150px;
+	    border-collapse: collapse;
+	    width: 38%;
+	}
+	th, td {
+	    border: 1px solid #ddd;
+	    padding: 8px;
+	    text-align: center;
+	}
+	th {
+	    background-color: #f2f2f2;
+	}
+	
+	a {
+	    text-decoration: none;
+	    color: green; 
+	}
+	
+	a:hover {
+	    color: red; 
+	    font-weight: bold;
+	}
+	
+	#btnEnviar{
+		border-radius: 15px;
+		background-color: white; 
+		color: black; 
+		border: 2px solid #04AA6D;
+		font-weight: bold;
+	}
+	
+		#btnEnviar:hover {
+		border-radius: 15px;
+		background-color: white; 
+		color: red; 
+		border: 2px solid red;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a> 
+	<table>
+	    <tr>
+	        <th>Formulario para Comprar Productos</th>
+	    </tr>
+	 	<form id="datosRealizarCompraFormulario" action="ServletRealizarCompraProducto" method="post">  
+	    <tr>
+	        <td>
+	        	<label for="nombre">Nombre producto: </label>
+	            <input type="text" id="nombre" name="nombre">
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <label for="stock">Cantidad: </label>
+	            <input type="number" id="stock" name="stock">
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <button type="button" id="btnEnviar" onclick="enviarFormulario()">COMPRAR PRODUCTO</button>
+	        </td>
+	    </tr>
+	    </form>
+	    
+	</table>
+
+ <!--    <h1>COMPRA DE PRODUCTOS</h1>
+    <form id="datosRealizarCompraFormulario" action="ServletRealizarCompraProducto" method="post">
+        <label for="nombre">Nombre producto: </label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="stock">Cantidad: </label><br>
+        <input type="number" id="stock" name="stock"><br>
+        <button type="button" id="btnEnviar" onclick="enviarFormulario()">Comprar Producto</button>
+    </form><br>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>     -->
+</body>
+</html>

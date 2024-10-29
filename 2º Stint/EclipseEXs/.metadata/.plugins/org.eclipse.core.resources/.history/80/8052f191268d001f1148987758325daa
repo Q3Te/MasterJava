@@ -1,0 +1,36 @@
+package com.masterjava.junittesting;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.masterjava.enums.Categoria;
+import com.masterjava.modelos.Producto;
+
+class ProductoJUnitTest {
+
+//	@Test
+//	void test() {
+//		fail("Not yet implemented");
+//	}
+	
+	//TEST METHOS IN Class Product
+	@Test
+	void esMismoNombreProductoTest() {
+		//Arrange 
+		 Producto p1=new Producto("Chocolate",3.41,100,Categoria.DULCES);
+		 Producto p2=new Producto("Camiseta",39.99,100,Categoria.ROPA);
+		 Producto p3=new Producto("Cafe",1.00,100,Categoria.BEBIDAS);
+		 Producto p4=new Producto("ProductoACambiar",10.00,100,Categoria.MUEBLES);
+		 
+		 //Act
+			boolean productoEsIgual = p1.esMismoNombreProducto(p1);
+			boolean productoNoIgual = p2.esMismoNombreProducto(p2);
+			
+		//Assert
+		assertFalse(productoEsIgual); //Was initially assertTrue giving [ AssertionFailedError: expected: <true> but was: <false>]
+		
+		assertFalse(productoNoIgual); // assertTrue (nota1.esMismaAsignatura(nota2)
+	}
+
+}

@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.masterjava.controller;
+
+/**
+ * 
+ */
+
+@REST
+public class LibroController {
+
+}

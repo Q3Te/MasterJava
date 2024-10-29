@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eliminar Producto</title>
+<script>
+function validacionCampos(){
+	const formulario = document.querySelector('form');
+	const nombreInput = document.querySelector('#producto');
+	
+	let isValid = true;
+	
+	if((nombreInput.value.trim() === '') || (!esTexto(nombreInput.value)))
+	{
+	  alert('Nombre no puede estar vacío o contener número(s)');
+	  isValid = false;
+	}
+	
+	return isValid;
+}
+
+function esTexto(inputValue) {
+	return /^[a-zA-Z]+$/.test(inputValue.trim());
+}
+
+function enviarFormulario(){
+  	if(validacionCampos())
+  	{
+  		alert('TODO BIEN');
+   		document.getElementById('datosFormulario').submit();
+	    document.getElementById('datosFormulario').reset(); 
+  	}
+}
+
+</script>
+<style>
+	table {
+	    margin-left: 470px;
+	    margin-top: 150px;
+	    border-collapse: collapse;
+	    width: 38%;
+	}
+	th, td {
+	    border: 1px solid #ddd;
+	    padding: 8px;
+	    text-align: center;
+	}
+	th {
+	    background-color: #f2f2f2;
+	}
+	
+	a {
+	    text-decoration: none;
+	    color: green; 
+	}
+	
+	a:hover {
+	    color: red; 
+	    font-weight: bold;
+	}
+	
+	#btnEnviar{
+		border-radius: 15px;
+		background-color: white; 
+		color: black; 
+		border: 2px solid #04AA6D;
+		font-weight: bold;
+	}
+	
+		#btnEnviar:hover {
+		border-radius: 15px;
+		background-color: white; 
+		color: red; 
+		border: 2px solid red;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a> 
+	<table>
+	    <tr>
+	        <th>Formulario para Eliminar Producto</th>
+	    </tr>
+	    <form id="datosFormulario" action="Eliminar" method="post">  
+	    <tr>
+	        <td>
+	        	<label for="producto">Nombre producto a eliminar: </label>
+	            <input type="text" id="producto" name="producto">
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <button type="button" id="btnEnviar" onclick="enviarFormulario()">ELIMINAR PRODUCTO</button>
+	        </td>
+	    </tr>
+	    </form>
+	    
+	</table>
+
+<!-- 	<form id="datosFormulario" action="ServletEliminar" method="post">
+		<label for="producto">Nombre producto a eliminar: </label><br>
+		<input type="text" id="producto" name="producto"><br>
+		<button type="button" id="btnEnviar" onclick="enviarFormulario()">Eliminar Producto</button>
+	</form><br>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a> -->
+</body>
+</html>

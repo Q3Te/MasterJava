@@ -1,0 +1,53 @@
+package com.masterjava.servlets;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import com.masterjava.enums.Categoria;
+import com.masterjava.modelos.Producto;
+import com.masterjava.services.ValidationService;
+
+/**
+ * Servlet implementation class ServletRealizarCompraProducto
+ */
+@WebServlet("/ServletRealizarCompraProducto")
+public class ServletRealizarCompraProducto extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ValidationService proceso = new ValidationService();
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nombre = request.getParameter("nombre");   	    	    
+	    int cantidadComprada = Integer.parseInt(request.getParameter("stock"));	
+	    int stock=proceso.getStockByNombre(nombre);   System.out.println("Stock para producto deseado:"+stock, if Stock = -1, entoces nombreProducto mal);
+	    
+	    boolean nombreProductoBuscadoExiste = proceso.buscarNombreParaComprar(nombre);
+	    
+	    if((nombreProductoBuscadoExiste) && (cantidadComprada<=stock))  //	    if((stock==-1) && (nombreProductoBuscadoExiste) && (cantidadComprada<=stock)) 
+	    {
+	    	int nuevoStock = stock-cantidadComprada;
+	    	System.out.println("Nuevo stock después de la compra: " + nuevoStock);
+		    double precio = proceso.getPrecioByNombre(nombre);   System.out.println(precio);
+		    Categoria categoria = proceso.getCategoriaByNombre(nombre);  System.out.println(categoria);
+		    Producto producto = new Producto(nombre, precio, stock, categoria);  System.out.println(producto);
+		    
+		    double ticketCompra = proceso.procesoComprarProducto(precio, cantidadComprada);	 System.out.println(ticketCompra);
+		    
+		    request.setAttribute("producto", producto);
+		    request.setAttribute("ticketCompra", ticketCompra);
+		    request.setAttribute("nuevoStock", nuevoStock);
+		    request.setAttribute("cantidadComprada", cantidadComprada);
+//		    RequestDispatcher despatcher = request.getRequestDispatcher("/resultadoCompraProducto.jsp");
+//		    despatcher.forward(request, response);
+	    }
+	    else
+	    {
+	        RequestDispatcher despatcher = request.getRequestDispatcher("/malComprarProducto.jsp");
+	        despatcher.forward(request, response);
+	    }
+	}
+}

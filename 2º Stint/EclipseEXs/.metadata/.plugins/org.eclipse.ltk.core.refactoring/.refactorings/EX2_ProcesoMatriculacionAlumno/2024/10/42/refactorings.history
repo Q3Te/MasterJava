@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.masterjava.enums&apos; to &apos;EX4_PruebaSegunda_TiendaProductos/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;EX2_ProcesoMatriculacionAlumno&apos;&#x0D;&#x0A;- Destination element: &apos;EX4_PruebaSegunda_TiendaProductos/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;EX2_ProcesoMatriculacionAlumno/src/main/java/com.masterjava.enums&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=EX4_PruebaSegunda_TiendaProductos/src\/main\/java" element1="/src\/main\/java&lt;com.masterjava.enums" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1728917088868" version="1.0"/>
+</session>

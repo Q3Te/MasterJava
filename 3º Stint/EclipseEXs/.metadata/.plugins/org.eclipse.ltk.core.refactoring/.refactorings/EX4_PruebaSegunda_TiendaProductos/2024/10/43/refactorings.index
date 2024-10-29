@@ -1,0 +1,17 @@
+1729844948321	Move 12 resources to 'No_BDD'
+1729844989715	Move 'listado.jsp' to 'No_BDD'
+1729849949537	Delete element
+1729849964028	Move 'resultadoAltaProducto.jsp' to 'webapp'
+1729850395576	Delete element
+1729850720568	Move 'malEliminarProducto.jsp' to 'webapp'
+1729850749358	Move 'resultadoEliminarProducto.jsp' to 'webapp'
+1729850869662	Delete element
+1729850939102	Move 'resultadoBusqueda.jsp' to 'webapp'
+1729850943787	Move 'malBusqueda.jsp' to 'webapp'
+1729853064529	Delete element
+1729853092219	Move 9 resources to 'AA_TEMP'
+1729853117909	Move 'modificar.html' to 'WEB-INF'
+1729853275348	Move 'buscar.html' to 'webapp'
+1729853290155	Move 'buscar.html' to 'AA_TEMP'
+1729853425977	Move 3 resources to 'webapp'
+1729853699493	Delete element

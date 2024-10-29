@@ -1,0 +1,5 @@
+package com.masterjava.service;
+
+public interface LibroService {
+	public List<Libro> liros();
+}

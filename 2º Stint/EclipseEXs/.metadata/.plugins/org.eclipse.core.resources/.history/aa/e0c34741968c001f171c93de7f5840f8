@@ -1,0 +1,64 @@
+package com.masterjava.servlets;
+
+import java.io.IOException;
+import java.util.List;
+
+import com.masterjava.enums.Categoria;
+import com.masterjava.modelos.Producto;
+import com.masterjava.services.ValidationService;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ServletRealizarCompraProducto
+ */
+@WebServlet("/ServletRealizarCompraProducto")
+public class ServletRealizarCompraProducto extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ValidationService proceso = new ValidationService();
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nombre = request.getParameter("nombre");   	    	    
+	    int cantidad_A_Comprar = Integer.parseInt(request.getParameter("stock"));	
+	    int stock=proceso.getStockByNombre(nombre);   System.out.println("Stock para producto deseado es [ "+stock+" ]	 Si  Stock = -1, entoces nombreProducto a comprar mal"); // Return stock of product if product name matches
+	    
+	    boolean nombreProductoBuscadoExiste = proceso.buscarNombreParaComprar(nombre);
+	    
+	    if((nombreProductoBuscadoExiste) && (cantidad_A_Comprar<=stock))
+	    {
+	    	int nuevoStock = stock-cantidad_A_Comprar;
+		    double precio = proceso.getPrecioByNombre(nombre);  // Return precio of product if product name matches
+		    Categoria categoria = proceso.getCategoriaByNombre(nombre);  // Return categoria of product if product name matches, to be able to use in visualization in jsp
+		    Producto producto = new Producto(nombre, precio, stock, categoria); //Para pasar lo al jsp
+		    
+		    double ticketCompra = proceso.procesoComprarProducto(precio, cantidad_A_Comprar);
+		    
+		    request.setAttribute("producto", producto);
+		    request.setAttribute("ticketCompra", ticketCompra);
+		    request.setAttribute("nuevoStock", nuevoStock);
+		    request.setAttribute("cantidad_A_Comprar", cantidad_A_Comprar);
+		    
+		    List<Producto> listaProductosActualizada = proceso.getListaProductos();
+		    request.setAttribute("listaProductosActualizada", listaProductosActualizada);
+
+		    // Define the attributes as request attributes
+		    request.setAttribute("nombre", p.getNombre());
+		    request.setAttribute("precio", p.getPrecio());
+		    request.setAttribute("nuevoStock", p.getStock());
+		    request.setAttribute("categoria", p.getCategoria());
+
+		    RequestDispatcher despatcher = request.getRequestDispatcher("/resultadoCompraProducto.jsp");
+		    despatcher.forward(request, response);
+	    }
+	    else
+	    {
+	        RequestDispatcher despatcher = request.getRequestDispatcher("/malComprarProducto.jsp");
+	        despatcher.forward(request, response);
+	    }
+	}
+}

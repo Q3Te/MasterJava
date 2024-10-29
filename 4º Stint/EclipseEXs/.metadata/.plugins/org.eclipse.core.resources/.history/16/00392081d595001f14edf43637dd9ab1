@@ -1,0 +1,9 @@
+package com.masterjava.service;
+
+public interface LibroService {
+	public List<Libro> libros();
+	public Libro buscarLibro(int isbn);
+	public void altaLibro(Libro libro);
+	public void actualizarLibro(Libro libro);
+	public List<Libro> eliminarLibro(int isbn);
+}

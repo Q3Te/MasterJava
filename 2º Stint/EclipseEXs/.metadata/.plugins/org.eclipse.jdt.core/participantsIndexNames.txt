@@ -1,0 +1,45 @@
+INDEX VERSION 1.134
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1101329711.index
+\Lunes1401-FrontController\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2772467776.index
+\Lunes1402-includeJSP\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2791862545.index
+\Lunes1405-JSTLconMaven\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3764446069.index
+\JSP_Request_Loop\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\647666210.index
+\Lunes1403-EL\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\997310715.index
+\00FRIDAY11_OCTOBER\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1609938141.index
+\Visualization_JSP\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3427741265.index
+\Part_1\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3179213638.index
+\EX2_JSP_TablaMultiplicar\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\104746625.index
+\EX3_BuscadorTematica_JSP\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\435618238.index
+\EX4_PruebaSegunda_TiendaProductos\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1704017313.index
+\16-JSPySessiones\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1338396418.index
+\Lunes1404-JSTLconlib\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\809416348.index
+\15-JSPyClases\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\141035773.index
+\Lunes1405-JSTLconMaven\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\541403870.index
+\EX4_PruebaSegunda_TiendaProductos\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\456860790.index
+\Pedido\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4139233371.index
+\0Testing\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3492327366.index
+\Lunes1402-includeJSP\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\107700121.index
+\PruebaSegunda\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3366657965.index
+\0Testing\src\main\java
+C:\Users\6003218\Desktop\2º Stint\EclipseEXs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2681566677.index
+\Part_2\src\main\java

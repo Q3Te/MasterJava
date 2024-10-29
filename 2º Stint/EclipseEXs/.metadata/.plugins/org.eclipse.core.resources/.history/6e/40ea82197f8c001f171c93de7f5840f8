@@ -1,0 +1,102 @@
+package com.masterjava.servlets;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+import com.masterjava.enums.Categoria;
+import com.masterjava.modelos.Producto;
+import com.masterjava.services.ValidationService;
+
+/**
+ * Servlet implementation class ServletRealizarCompraProducto
+ */
+@WebServlet("/ServletRealizarCompraProducto")
+public class ServletRealizarCompraProducto extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private ValidationService proceso = new ValidationService();
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nombre = request.getParameter("nombre");   	    	    
+	    int cantidadComprada = Integer.parseInt(request.getParameter("stock"));	
+	    int stock=proceso.getStockByNombre(request,response,nombre);   System.out.println(stock);
+	    
+	    boolean nombreProductoBuscadoExiste = proceso.buscarNombreParaComprar(nombre);
+	    
+	    if((nombreProductoBuscadoExiste) && (cantidadComprada<=stock)) 
+	    {
+	    	int nuevoStock = stock-cantidadComprada;
+	    	System.out.println("Nuevo stock después de la compra: " + nuevoStock);
+		    double precio = proceso.getPrecioByNombre(nombre);   System.out.println(precio);
+		    Categoria categoria = proceso.getCategoriaByNombre(nombre);  System.out.println(categoria);
+		    Producto producto = new Producto(nombre, precio, stock, categoria);  System.out.println(producto);
+		    
+		    double ticketCompra = proceso.procesoComprarProducto(precio, cantidadComprada);	 System.out.println(ticketCompra);
+		    
+		    request.setAttribute("producto", producto);
+		    request.setAttribute("ticketCompra", ticketCompra);
+		    request.setAttribute("nuevoStock", nuevoStock);
+		    request.setAttribute("cantidadComprada", cantidadComprada);
+		    RequestDispatcher despatcher = request.getRequestDispatcher("/resultadoCompraProducto.jsp");
+		    despatcher.forward(request, response);
+	    }
+	    else
+	    {
+	        RequestDispatcher despatcher = request.getRequestDispatcher("/malComprarProducto.jsp");
+	        despatcher.forward(request, response);
+	    }
+	}
+}
+
+
+
+
+
+
+	
+//	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//	    String nombre = request.getParameter("nombre");
+//	    int cantidadComprada = Integer.parseInt(request.getParameter("stock"));  // This is the amount the user wants to buy
+//
+//	    // Retrieve the product from the list using the name
+//	    Producto productoComprado = null;
+//	    for (Producto p : ValidationService.listaProductos()) {
+//	        if (p.getNombre().equalsIgnoreCase(nombre)) {
+//	            productoComprado = p;
+//	            break;
+//	        }
+//	    }
+//
+//	    if (productoComprado != null) {
+//	        // Get the original stock
+//	        int stockOriginal = productoComprado.getStock();
+//	        
+//	        // Check if there's enough stock to complete the purchase
+//	        if (cantidadComprada <= stockOriginal) {
+//	            // Subtract the purchased amount from the original stock
+//	            productoComprado.setStock(stockOriginal - cantidadComprada);
+//
+//	            // Calculate the total ticket amount
+//	            double ticketCompra = productoComprado.getPrecio() * cantidadComprada;
+//
+//	            // Pass the product and the ticket amount to the JSP
+//	            request.setAttribute("producto", productoComprado);
+//	            request.setAttribute("ticketCompra", ticketCompra);
+//	        } else {
+//	            // Handle the case when there's not enough stock
+//	            request.setAttribute("error", "No hay suficiente stock para completar la compra.");
+//	        }
+//	    } else {
+//	        request.setAttribute("error", "Producto no encontrado.");
+//	    }
+//
+//	    // Forward to JSP
+//	    RequestDispatcher dispatcher = request.getRequestDispatcher("/resultadoCompraProducto.jsp");
+//	    dispatcher.forward(request, response);
+//	}
+//
+//}

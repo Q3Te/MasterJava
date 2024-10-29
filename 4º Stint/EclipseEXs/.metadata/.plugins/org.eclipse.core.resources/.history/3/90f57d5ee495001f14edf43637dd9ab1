@@ -1,0 +1,13 @@
+package com.masterjava.service;
+
+import java.util.List;
+
+import com.masterjava.modelos.Libro;
+
+public interface CursoService {
+	public List<Libro> libros();
+	public Libro buscarLibro(int isbn);
+	public void altaLibro(Libro libro);
+	public void actualizarLibro(Libro libro);
+	public List<Libro> eliminarLibro(int isbn);
+}

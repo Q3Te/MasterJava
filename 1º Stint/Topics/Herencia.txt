@@ -1,0 +1,42 @@
+Clase Padre --> Clase Hija --> Clase Nieta
+
+If a class inherits from a another class and to the class you add "final", no other class can inherit from it
+____________________________________________________________________________________________________________________________________________
+package com.masterjava.modelo;
+
+public class ClasePadre {
+	private String mensaje;
+
+	public ClasePadre() {
+	super();
+	this.mensaje="SENT FROM - Clase Padre Blank Constuctor";
+}
+	public ClasePadre(String s) {   //If an Object is initiallised with a string. the OUTPUT [mensaje] will be the string
+	super();
+	this.mensaje=s;
+}
+	public void output() {
+		System.out.println("OUTPUT MANUALLY WRITTEN IN System.out.println");
+		System.out.println(mensaje);
+	}
+}
+
+		ClasePadre padre = new ClasePadre();
+		padre.output(); System.out.println();
+		ClasePadre padreWithMessage = new ClasePadre("12345");
+		padreWithMessage.output(); System.out.println();
+==
+OUTPUT MANUALLY WRITTEN IN System.out.println
+SENT FROM - Clase Padre Blank Constuctor
+
+OUTPUT MANUALLY WRITTEN IN System.out.println
+12345
+// If you don't pass a String in the object, the default message is shown
+// If you pass a String in the object, your Object String is shown only if define the parameterpublic ClasePadre(String texto) { [ this.mensaje=texto;] }       else if [ this.mensaje="XXX"; ] your output will be OVERWRITTEN
+____________________________________________________________________________________________________________________________________________
+public ClasePadre(String texto, int numa) {
+super();
+this.mensaje=texto;
+numa=numa; OR this.num=numa	//Then calling it in System.out.println(numa); ERROR as you need to define it within ClasePadre if you want to bring it in as a parameter
+				//SOLUTION define private int num;  this.num=numa;
+}
