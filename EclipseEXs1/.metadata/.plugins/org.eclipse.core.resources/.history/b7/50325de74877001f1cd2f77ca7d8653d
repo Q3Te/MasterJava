@@ -1,0 +1,143 @@
+package com.masterjava.ex5;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		  Scanner teclado = new Scanner(System.in);
+
+		  int op, codigo = 0, aniosCarcel, numMuertos;
+	        double dineroRobado;
+	        String tipoDelincuente, nombre;
+	        //try {
+	        do {
+	            System.out.println("Elige una opción: \n"
+	                    + "1- Crear delincuente\n"
+	                    + "2- Condenar, aniade anios de condena al ladron o al asesino\n"
+	                    + "3- Numero de muertos totales, retorna cuántos hay entre todos los asesinos\n"
+	                    + "4- Elimina los ladrones con menos de 1000 euros robados\n"
+	                    + "5- Ordenar de manera creciente por los anios de carcel\n"
+	                    + "6- Visualizar todos los delincuentes\n"
+	                    + "7- Visualizar ladrones\n"
+	                    + "8- Visualizar asesinos");
+	            op = teclado.nextInt();
+
+	            switch (op) {
+	                //Crear delincuente
+	                case 1:
+	                    System.out.println("Es un ladron o un asesino? ");
+	                    teclado.nextLine();
+	                    tipoDelincuente = teclado.nextLine();
+
+	                    if (tipoDelincuente.equals("ladron") || tipoDelincuente.equals("Ladron")) { //para diferenciar entre mayus
+
+	                        System.out.println("Nombre del ladron: ");
+	                        nombre = teclado.nextLine();
+
+	                        delincuentes.add(new Ladron(nombre));
+
+	                    } else if (tipoDelincuente.equals("asesino") || tipoDelincuente.equals("Asesino")) {
+
+	                        System.out.println("Nombre del asesino: ");
+	                        nombre = teclado.nextLine();
+
+	                        delincuentes.add(new Asesino(nombre));
+
+	                    } else {
+	                        System.out.println("Tipo incorrecto");
+	                    }
+	                    break;
+
+	                //Condenar
+	                case 2:
+	                    System.out.println("Es un ladron o un asesino? ");
+	                    teclado.nextLine();
+	                    tipoDelincuente = teclado.nextLine();
+
+	                    System.out.println("Inserte el código del delincuente: ");
+	                    codigo = teclado.nextInt();
+	                    delincuente = buscarDelincuente(delincuentes, codigo);
+	                    if (delincuente != null) {
+	                        if (tipoDelincuente.equals("ladron") || tipoDelincuente.equals("Ladron")) {
+
+	                            System.out.println("Anios a condenar: ");
+	                            aniosCarcel = teclado.nextInt();
+	                            System.out.println("Dinero robado: ");
+	                            dineroRobado = teclado.nextDouble();
+
+	                             ((Ladron) delincuente).condenar(aniosCarcel, dineroRobado);
+
+	                        } else if (tipoDelincuente.equals("asesino") || tipoDelincuente.equals("Asesino")) {
+
+	                            System.out.println("Anios a condenar: ");
+	                            aniosCarcel = teclado.nextInt();
+	                            System.out.println("Número de muertos: ");
+	                            numMuertos = teclado.nextInt();
+
+	                            ((Asesino) delincuente).condenar(aniosCarcel, numMuertos);
+
+	                        } else {
+	                            System.out.println("Tipo incorrecto");
+	                        }
+	                    }
+
+	                    break;
+
+	                //Numero de muertos totales, retorna cuántos hay entre todos los asesinos
+	                case 3:
+
+	                    /*int aux = 0;
+	                        for (int i = 0; i < delincuentes.size(); i++) {
+	                            aux += delincuentes.get(i).getNumMuertos();
+	                        }
+	                        System.out.println("Hay " + aux + " muertos en total");*/
+	                    break;
+
+	                //Elimina los ladrones con menos de 1000 euros robados
+	                case 4:
+	                    /* for (int i = 0; i < delincuentes.size(); i++) {
+	                            if (delincuentes.get(i).getDineroRobado() < 1000) {
+	                                delincuentes.remove(i);
+	                            }
+	                        }*/
+
+	                    break;
+
+	                //Ordenar de manera creciente por los años de cárcel
+	                case 5:
+	                    ordenar(delincuentes);
+	                    for (Delincuente i : delincuentes) {
+	                        System.out.println(i.toString());
+	                    }
+	                    break;
+
+	                //Visualizar delincuentes
+	                case 6:
+	                    for (Delincuente i : delincuentes) {
+	                        System.out.println(i.toString());
+	                    }
+	                    break;
+
+	                //Visualizar ladrones
+	                case 7:
+	                /* for (Ladron i : ladrones) {
+	                            System.out.println(i.toString());
+	                        }
+	                        break;*/
+
+	                //Visualizar asesinos    
+	                case 8:
+	                /* for (Asesino i : asesinos) {
+	                            System.out.println(i.toString());
+	                        }
+	                        break;*/
+	            }
+
+	        } while (op != 9);
+	        /*} catch (Exception e) {
+	            System.out.println("Datos introducidos incorrectos");
+	        }*/
+	    }
+
+	}

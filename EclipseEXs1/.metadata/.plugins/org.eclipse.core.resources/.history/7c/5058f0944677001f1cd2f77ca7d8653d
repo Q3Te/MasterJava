@@ -1,0 +1,13 @@
+package com.masterjava.ex5;
+
+public class Cuenta {
+	private String titular;
+	private float cantidad;
+	
+	public Cuenta(String titular, float cantidad) {
+		super();
+		this.titular = titular;
+		this.cantidad = cantidad;
+	}
+
+}

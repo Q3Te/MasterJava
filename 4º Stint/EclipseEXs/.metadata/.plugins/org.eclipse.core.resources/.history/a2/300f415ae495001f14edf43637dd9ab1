@@ -1,5 +1,0 @@
-package com.masterjava.service;
-
-public interface CursoService {
-
-}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eliminar Producto</title>
+<script>
+function validacionCampos(){
+	const formulario = document.querySelector('form');
+	const nombreInput = document.querySelector('#producto');
+	
+	let isValid = true;
+	
+	if((nombreInput.value.trim() === '') || (!esTexto(nombreInput.value)))
+	{
+	  alert('Nombre no puede estar vacío o contener número(s)');
+	  isValid = false;
+	}
+	
+	return isValid;
+}
+
+function esTexto(inputValue) {
+	return /^[a-zA-Z]+$/.test(inputValue.trim());
+}
+
+function enviarFormulario(){
+  	if(validacionCampos())
+  	{
+  		alert('TODO BIEN');
+   		document.getElementById('datosFormulario').submit();
+	    document.getElementById('datosFormulario').reset(); 
+  	}
+}
+
+</script>
+</head>
+<body>
+	<form id="datosFormulario" action="ServletEliminar" method="post">
+		<label for="producto">Nombre producto a eliminar: </label><br>
+		<input type="text" id="producto" name="producto"><br>
+		<button type="button" id="btnEnviar" onclick="enviarFormulario()">Eliminar Producto</button>
+	</form><br>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>
+</body>
+</html>

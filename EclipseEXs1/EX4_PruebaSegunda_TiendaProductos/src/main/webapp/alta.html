@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alta de Producto</title>
+<script>
+function validacionCampos(){
+	const formulario = document.querySelector('form');
+	const nombreInput = document.querySelector('#nombre');
+	const categoriaSelect = document.querySelector('#categoria');
+	const precioInput = document.querySelector('#precio');
+	const stockInput = document.querySelector('#stock');
+	
+	let isValid = true;
+	
+	if((nombreInput.value.trim() === '') || (!esTexto(nombreInput.value)))
+	{
+	  alert('Nombre no puede estar vacío o contener número(s)');
+	  isValid = false;
+	}
+	
+	if(categoriaSelect.value === '')
+	{
+	  alert('Debe seleccionar una categoría');
+	  isValid = false;
+	}
+	
+	if(isNaN(precioInput.value) || precioInput.value <= 0)
+	{
+	  alert('Precio debe ser un número mayor que 0');
+	  isValid = false;
+	}
+	
+	if(isNaN(stockInput.value) || stockInput.value <= 0)
+	{
+	  alert('Stock debe ser un número mayor que 0');
+	  isValid = false;
+	}
+	
+	return isValid;
+}
+
+function esTexto(inputValue) {
+	return /^[a-zA-Z]+$/.test(inputValue.trim());
+}
+
+function enviarFormulario(){
+  	if(validacionCampos())
+  	{
+  		alert('TODO BIEN');
+   		document.getElementById('datosFormulario').submit();
+	    document.getElementById('datosFormulario').reset(); 
+  	}
+}
+
+</script>
+</head>
+<body>
+    <h1>ALTA DE PRODUCTOS</h1>
+    <form id="datosFormulario" action="ServletAltaProducto" method="post">
+        <label for="nombre">Nombre producto: </label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="categoria">Categoria producto: </label><br>
+        <select id="categoria" name="categoria">
+            <option value="">Seleccione una categoría</option>
+		    <option value="DULCES">DULCES</option>
+		    <option value="ROPA">ROPA</option>
+		    <option value="BEBIDAS">BEBIDAS</option>
+		</select><br>
+        <label for="precio">Precio: </label><br>
+        <input type="number" id="precio" name="precio" ><br>
+        <label for="stock">Stock: </label><br>
+        <input type="number" id="stock" name="stock"><br>
+        <button type="button" id="btnEnviar" onclick="enviarFormulario()">Dar de alta</button>
+    </form><br>
+	<a href='index.html'>Menu opciones usuario [Tienda de Productos]</a>    
+</body>
+</html>

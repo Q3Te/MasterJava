@@ -1,0 +1,19 @@
+package com.testingspace.testing;
+
+public class Main {
+
+	public static void main(String[] args) {
+        ArrayList<Integer> arrL = new ArrayList<Integer>(2);
+        
+        // Adding elements to ArrayList
+        // using add() method
+        arrL.add(1);
+        arrL.add(2);
+ 
+        // Printing alongside accessing
+        // elements of ArrayList
+        System.out.println(arrL.get(0));
+
+	}
+
+}

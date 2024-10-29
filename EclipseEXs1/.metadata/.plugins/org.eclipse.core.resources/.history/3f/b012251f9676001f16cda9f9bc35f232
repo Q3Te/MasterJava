@@ -1,0 +1,35 @@
+spackage com.sinensia.demo;
+
+import java.util.Comparator;
+import java.util.List;
+
+class Jugador {
+	private String nombre;
+	private int g_Marcados;
+	
+	public Jugador(String nombre) {
+		this.nombre=nombre;
+		this.g_Marcados=0;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getG_Marcados() {
+		return g_Marcados;
+	}
+
+	public void setG_Marcados(int g_Marcados) {
+		this.g_Marcados = g_Marcados;
+	}
+	
+	public void masGoles(int goles){
+		this.g_Marcados+=goles;
+	}
+
+}

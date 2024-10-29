@@ -1,0 +1,68 @@
+package com.masterjava.ex5;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		  Scanner teclado = new Scanner(System.in);
+		  int op;
+		  
+		  	String titular, nombreCheck;
+		  	double cantidad;
+		  	
+	        do {
+	            System.out.println("Elige una opción: \n"
+	                    + "1- Crear titular\n"
+	                    + "2- Ingresar dinero\n"
+	                    + "3- Retirar dinero\n"
+	                    + "4- Visualizar datos\n");
+	            op = teclado.nextInt();
+
+	            switch (op) {
+	                case 1:
+	                    System.out.println("Introducir nombre: ");
+	                    teclado.nextLine();
+	                    titular = teclado.nextLine();
+
+	                    //ADD IT TO THE TYPE OF FILE IT IS 
+//	                    if (tipoDelincuente.equals("ladron") || tipoDelincuente.equals("Ladron")) { //para diferenciar entre mayus
+//
+//	                        System.out.println("Nombre del ladron: ");
+//	                        nombre = teclado.nextLine();
+//
+//	                        delincuentes.add(new Ladron(nombre));
+//
+//	                    } else if (tipoDelincuente.equals("asesino") || tipoDelincuente.equals("Asesino")) {
+//
+//	                        System.out.println("Nombre del asesino: ");
+//	                        nombre = teclado.nextLine();
+//
+//	                        delincuentes.add(new Asesino(nombre));
+//
+//	                    } else {
+//	                        System.out.println("Tipo incorrecto");
+//	                    }
+	                    break;
+
+
+	                case 2:
+	                	System.out.println("Nombre Titular Cuenta: [minúsculas]");
+	                    teclado.nextLine();
+	                    nombreCheck = teclado.nextLine();
+	                	System.out.println("Cantidad a Ingresar: ");
+	                	
+	                	break;
+	                	
+	                case 3:
+	                	break;
+	                	
+	                case 4:
+	                	break;
+	            }
+
+	        } while (op !=5);
+
+	    }
+
+	}

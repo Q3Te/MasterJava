@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.LinkageError"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.masterjava.modelo.ClasePadre"/>
+    <fullyQualifiedTypeName name="com.masterjava.modelo.Tambor"/>
+    <fullyQualifiedTypeName name="com.masterjava.modelos.Estadistica"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="com.masterjava.modelos.Coche"/>
+</qualifiedTypeNameHistroy>

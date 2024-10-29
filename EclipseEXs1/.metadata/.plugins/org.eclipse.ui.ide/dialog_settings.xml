@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<section name="ExternalProjectImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="706"/>
+			<item key="DIALOG_Y_ORIGIN" value="55"/>
+			<item key="DIALOG_WIDTH" value="525"/>
+			<item key="DIALOG_HEIGHT" value="710"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\6003218\Desktop\BACK TO PERSONAL PC\0 old\Herencia"/>
+			<item value="C:\Users\6003218\Desktop\1º Stint\EclipseEXs\EX12_Test_ConversorPesetasEuros"/>
+			<item value="C:\Users\6003218\Desktop\FROM PERSONAL PC\Z_Testing\EX12_Test_ConversorPesetasEuros"/>
+			<item value="C:\Users\6003218\Desktop\20-Funcionalidades"/>
+			<item value="C:\Users\6003218\Desktop\FROM PERSONAL PC\Herencia"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX11_PruebaPrimera"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX1_LigaFutbol_AlternativeMethod"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\Herencia"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX10_FigurasGeometricas"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX10 REF"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX9_Animales"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX1_LigaFutbol_SimpleMethod"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\ArgumentosVariable"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX7_Orquesta"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX8 - Interfaces"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX7 - Orquesta"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX6_Cafetera"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX4_Libro"/>
+			<item value="C:\Users\6003218\Downloads\Fix\demo"/>
+			<item value="C:\Users\6003218\Downloads\o"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\0Testing"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX1_LigaFutbol_BACKUP"/>
+			<item value="C:\Users\6003218\Desktop\Back to pc\EX4_Libro"/>
+			<item value="C:\Users\6003218\Desktop\QN6 REF DIEGO 06-cafetera"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX3_TiendaInformatica"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX1_LigaFutbol"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\EX5_Cuenta"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\Jerarquia_Herencias"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\TiendaInformatica"/>
+			<item value="C:\Users\6003218\Desktop\EclipseEXs\demo"/>
+		</list>
+		<section name="SmartImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="80"/>
+			<item key="DIALOG_Y_ORIGIN" value="191"/>
+			<item key="DIALOG_WIDTH" value="885"/>
+			<item key="DIALOG_HEIGHT" value="629"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="706"/>
+		<item key="DIALOG_Y_ORIGIN" value="142"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+		<section name="NewWizard.dialogBounds">
+		</section>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="508"/>
+			<item key="DIALOG_Y_ORIGIN" value="125"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="676"/>
+		<item key="DIALOG_Y_ORIGIN" value="348"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

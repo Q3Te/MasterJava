@@ -1,0 +1,60 @@
+package com.masterjava.ex5;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		  Scanner teclado = new Scanner(System.in);
+
+		  int op, codigo = 0, aniosCarcel, numMuertos;
+	        double dineroRobado;
+	        String tipoDelincuente, nombre;
+	        //try {
+	        do {
+	            System.out.println("Elige una opción: \n"
+	                    + "1- Crear titular\n"
+	                    + "2- Ingresar dinero\n"
+	                    + "3- Retirar dinero\n"
+	                    + "4- Visualizar datos\n"
+");
+	            op = teclado.nextInt();
+
+	            switch (op) {
+	                //Crear delincuente
+	                case 1:
+	                    System.out.println("Es un ladron o un asesino? ");
+	                    teclado.nextLine();
+	                    tipoDelincuente = teclado.nextLine();
+
+	                    if (tipoDelincuente.equals("ladron") || tipoDelincuente.equals("Ladron")) { //para diferenciar entre mayus
+
+	                        System.out.println("Nombre del ladron: ");
+	                        nombre = teclado.nextLine();
+
+	                        delincuentes.add(new Ladron(nombre));
+
+	                    } else if (tipoDelincuente.equals("asesino") || tipoDelincuente.equals("Asesino")) {
+
+	                        System.out.println("Nombre del asesino: ");
+	                        nombre = teclado.nextLine();
+
+	                        delincuentes.add(new Asesino(nombre));
+
+	                    } else {
+	                        System.out.println("Tipo incorrecto");
+	                    }
+	                    break;
+
+	                //Condenar
+	                case 2:
+	                	break;
+	            }
+
+	        } while (op != 9);
+	        /*} catch (Exception e) {
+	            System.out.println("Datos introducidos incorrectos");
+	        }*/
+	    }
+
+	}

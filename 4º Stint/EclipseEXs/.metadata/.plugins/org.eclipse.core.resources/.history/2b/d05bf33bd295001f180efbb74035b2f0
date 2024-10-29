@@ -1,8 +1,0 @@
-RECURSO: Libro
-
-CRUD de Libro
-
-GET    (Recuperar libors, Recuperar un libro)
-POST   (Insertar libro)
-PUT    (Actualizar libro)
-DELETE (Eliminar libro)
