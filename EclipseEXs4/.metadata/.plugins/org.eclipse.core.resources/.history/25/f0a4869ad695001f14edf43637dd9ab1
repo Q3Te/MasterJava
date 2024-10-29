@@ -1,0 +1,46 @@
+package com.masterjava.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.masterjava.modelos.Libro;
+
+public class LibroServiceImpl implements LibroService {
+	public List<Libro> libros;
+	
+	public LibroServiceImpl() {
+		libros = new ArrayList<Libro>(List.of
+				(new Libro (1,"asdfw","wef"),
+				(new Libro (2,"afghw","hre"),
+				(new Libro (3,"yuffw","iuh"),
+				(new Libro (4,"sdfwt","dfw"),
+				(new Libro (5,"opuie","cas"));
+	}
+
+	@Override
+	public List<Libro> libros() {
+		return libros;
+	}
+
+	@Override
+	public Libro buscarLibro(int isbn) {
+		return null;
+	}
+
+	@Override
+	public void altaLibro(Libro libro) {
+		
+	}
+
+	@Override
+	public void actualizarLibro(Libro libro) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Libro> eliminarLibro(int isbn) {
+		return null;
+	}
+
+}

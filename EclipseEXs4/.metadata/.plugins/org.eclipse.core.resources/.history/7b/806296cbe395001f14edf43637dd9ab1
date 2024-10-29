@@ -1,0 +1,8 @@
+package com.masterjava.modelos;
+
+public class Curso {
+	private int codCurso;
+	private String nombre;
+	private int duracionCurso;
+	private int precio;
+}

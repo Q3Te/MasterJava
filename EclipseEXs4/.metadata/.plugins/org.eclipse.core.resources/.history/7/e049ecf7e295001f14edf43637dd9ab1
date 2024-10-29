@@ -1,0 +1,13 @@
+package com.masterjava.inicio;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Ex1CursosApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

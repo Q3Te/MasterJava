@@ -1,0 +1,8 @@
+RECURSO: Libro
+
+url --> http://localhost:8080/
+
+GET    (Recuperar libors [url], Recuperar un libro)
+POST   (Insertar libro)
+PUT    (Actualizar libro)
+DELETE (Eliminar libro)
